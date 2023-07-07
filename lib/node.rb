@@ -6,4 +6,8 @@ class Node
     @data = data
     @next_node = next_node
   end
+
+  def new_node(value)
+    @next_node = value
+  end
 end
