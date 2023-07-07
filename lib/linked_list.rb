@@ -6,7 +6,16 @@ class LinkedList
   end
 
   def append(data)
-    @head = Node.new(data)
+    if @head == nil
+      @head = Node.new(data)
+    else
+      @head.new_node(Node.new(data))
+    end
+    # if @head = Node.new(data)
+    # else
+    #   next_node = Node.new(data)
+      # require 'pry'; binding.pry
+    # end
   end
 
   def count
@@ -17,6 +26,7 @@ class LinkedList
       data_counter = 0
     elsif current_node.next_node == nil
       data_counter = 1
+      
     end
   end
 
