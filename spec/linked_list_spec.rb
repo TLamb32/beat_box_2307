@@ -30,4 +30,13 @@ RSpec.describe LinkedList do
       expect(list.count).to eq(1)
     end
   end
+
+  describe "#to_string" do
+    it "will convert the data to a string of elements" do
+      list = LinkedList.new
+
+      list.append("doop")
+      expect(list.to_string).to eq("doop")
+    end
+  end
 end
