@@ -1,10 +1,11 @@
 require "./lib/node"
 
 RSpec.describe Node do
-  describe "iteration 1" do
+  describe "#initialize" do
     it "exists and has readable attributes" do
       node = Node.new("plop")
-
+      
+      expect(node).to be_a(Node)
       expect(node.data).to eq("plop")
     end
 
