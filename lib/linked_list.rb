@@ -11,11 +11,6 @@ class LinkedList
     else
       @head.new_node(Node.new(data))
     end
-    # if @head = Node.new(data)
-    # else
-    #   next_node = Node.new(data)
-      # require 'pry'; binding.pry
-    # end
   end
 
   def count
@@ -34,8 +29,9 @@ class LinkedList
     elsif @head.next_node != nil
       head_data + " " + next_node_data
     end
-    # require 'pry'; binding.pry
   end
+
+  # Helper Methods
 
   def head_data
     @head.data.to_s
