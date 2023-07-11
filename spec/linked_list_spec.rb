@@ -34,10 +34,9 @@ RSpec.describe LinkedList do
       list = LinkedList.new
 
       list.append("doop")
-      # list.append("deep")
-      # require 'pry'; binding.pry
       expect(list.count).to eq(1)
-      # expect(list.count).to eq(2)
+      list.append("deep")
+      expect(list.count).to eq(2)
     end
   end
 
@@ -46,7 +45,8 @@ RSpec.describe LinkedList do
       list = LinkedList.new
 
       list.append("doop")
-      expect(list.to_string).to eq("doop")
+      list.append("deep")
+      expect(list.to_string).to eq("doop deep")
     end
   end
 end
